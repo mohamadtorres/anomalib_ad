@@ -9,6 +9,7 @@ trainer:
   log_every_n_steps: 10
   enable_checkpointing: true
   enable_progress_bar: true
+  logger: true  # Aktiverar standardloggning med TensorBoard
 
 model:
   class_path: anomalib.models.Padim
@@ -24,8 +25,8 @@ model:
 data:
   class_path: anomalib.data.MVTec
   init_args:
-    root: /content/drive/MyDrive/Mvtec_dataset #Path to dataset
-    category: bottle #If u want another category change it here then!
+    root: /content/drive/MyDrive/Mvtec_dataset
+    category: bottle
     train_batch_size: 4
     eval_batch_size: 4
     num_workers: 8
